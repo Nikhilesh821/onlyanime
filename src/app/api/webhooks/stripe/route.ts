@@ -173,6 +173,14 @@ export async function POST(req: Request) {
                 }
                 break
             }
+            case "checkout.session.expired":{
+                const session=await stripe.checkout.sessions.retrieve((data.object as Stripe.Checkout.Session).id)
+                await prisma.order.delete({
+                    where:{id:session.metadata?.orderId}
+                })
+                break
+            }
+
             default:
                 console.log(`Unhandled event type: ${eventType}`)
                 break
