@@ -22,7 +22,7 @@ const AuthScreen = () => {
             <div className="mb-20 mt-12">
                 <div className="max-w-6xl mx-auto px-4">
                     <p className={"text-3xl md:text-5xl tracking-tight mt-4 mb-8 font-semibold text-center " + (inria2.className)}>
-                        Today's <span style={{ color: "#EF47BC" }} className='font-bold px-1 text-white'>Selection</span>
+                        Today <span style={{ color: "#EF47BC" }} className='font-bold px-1 text-white'>Selection</span>
                     </p>
                     <div className='flex flex-col gap-10 mt-10'>
                         <TodaysHiglights />
