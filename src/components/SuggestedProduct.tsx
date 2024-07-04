@@ -38,7 +38,7 @@ const SuggestedProduct = ({product}:{product:Product}) => {
             <CardContent className='flex flex-col flex-1 gap-3 p-2'>
                 <ZoomedImage imgSrc={product.image} className='h-44 object-cover rounded-lg'/>
                 <div className='flex justify-center mt-auto'>
-                <Link href={'/merch'} className={cn(buttonVariants(), inria2.className, "font-semibold rounded-full w-full text-md md:text-lg")}>
+                <Link href={`/merch/${product.id}`} className={cn(buttonVariants(), inria2.className, "font-semibold rounded-full w-full text-md md:text-lg")}>
                     Buy
                 </Link>
                 </div>

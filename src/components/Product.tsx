@@ -63,7 +63,7 @@ const Product = ({ product,adminView=false }: { product: any,adminView?:Boolean 
                             {product.isArchived?"Unarchive":"Archive"}
                         </Button>
                     ) :
-                    <Link href={'/merch'} className={cn(buttonVariants(), inria2.className, "font-semibold  rounded-full w-full text-md md:text-lg")}>
+                    <Link href={`/merch/${product.id}`} className={cn(buttonVariants(), inria2.className, "font-semibold  rounded-full w-full text-md md:text-lg")}>
                     Buy
                 </Link>
                     }
