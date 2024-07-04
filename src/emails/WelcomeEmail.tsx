@@ -13,7 +13,7 @@ const WelcomeEmail = ({
 	subscriptionEndDate: Date;
 }) => {
 	// TODO=> ADD THE PROD URL
-	const BASE_URL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "";
+	const BASE_URL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : process.env.NEXT_PUBLIC_BASE_URL;
 
 	return (
 		<Html>
