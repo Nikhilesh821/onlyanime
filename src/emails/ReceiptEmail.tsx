@@ -50,8 +50,8 @@ export const ReceiptEmail = ({
                 <Hr style={global.hr} />
                 <Section style={message}>
                     <Img
-                        src={`${BASE_URL}/logos/logo.svg`}
-                        // src={`https://res.cloudinary.com/dvnrlqqpq/image/upload/fl_preserve_transparency/v1719755997/awxq5fqfc5xd5xtzbegs.jpg?_s=public-apps`}
+                        // src={`${BASE_URL}/logos/logo.svg`}
+                        src={`https://res.cloudinary.com/dvnrlqqpq/image/upload/fl_preserve_transparency/v1719755997/awxq5fqfc5xd5xtzbegs.jpg?_s=public-apps`}
                         // src={"https://i.ibb.co/zRQ6qcJ/email-logo.png"}
                         width='120'
                         height='80'

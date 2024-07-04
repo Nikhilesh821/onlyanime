@@ -24,8 +24,8 @@ const WelcomeEmail = ({
 					<Section style={message}>
 						<Img
 							// todo => delete this one below
-							src={`${BASE_URL}/logos/logo.svg`}
-							// src={`https://res.cloudinary.com/dvnrlqqpq/image/upload/fl_preserve_transparency/v1719755997/awxq5fqfc5xd5xtzbegs.jpg?_s=public-apps`}
+							// src={`${BASE_URL}/logos/logo.svg`}
+							src={`https://res.cloudinary.com/dvnrlqqpq/image/upload/fl_preserve_transparency/v1719755997/awxq5fqfc5xd5xtzbegs.jpg?_s=public-apps`}
 							width='300'
 							height='200'
 							alt='welcome icon'
