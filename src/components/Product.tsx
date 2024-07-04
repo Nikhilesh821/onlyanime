@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { DollarSign } from 'lucide-react'
 import { centToDollars, cn } from '@/lib/utils'
 import ZoomedImage from './ZoomedImage'
-import { Button } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
 import Link from 'next/link'
 import { Inria_Sans, Inria_Serif } from 'next/font/google'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
@@ -63,11 +63,9 @@ const Product = ({ product,adminView=false }: { product: any,adminView?:Boolean 
                             {product.isArchived?"Unarchive":"Archive"}
                         </Button>
                     ) :
-                        <Button className={'!rounded-full text-md font-bold w-full ' + (inria2.className)}>
-                            <Link className='rounded-full' href={`/merch/${product.id}`}>
-                                Buy
-                            </Link>
-                        </Button>
+                    <Link href={'/merch'} className={cn(buttonVariants(), inria2.className, "font-semibold  rounded-full w-full text-md md:text-lg")}>
+                    Buy
+                </Link>
                     }
                 </div>
             </CardContent>

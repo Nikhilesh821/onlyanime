@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { DollarSign } from 'lucide-react'
-import { centToDollars } from '@/lib/utils'
-import { Button } from './ui/button'
+import { centToDollars, cn } from '@/lib/utils'
+import { Button, buttonVariants } from './ui/button'
 import Link from 'next/link'
 import { Inria_Sans, Inria_Serif } from 'next/font/google'
 import ZoomedImage from './ZoomedImage'
@@ -38,11 +38,9 @@ const SuggestedProduct = ({product}:{product:Product}) => {
             <CardContent className='flex flex-col flex-1 gap-3 p-2'>
                 <ZoomedImage imgSrc={product.image} className='h-44 object-cover rounded-lg'/>
                 <div className='flex justify-center mt-auto'>
-                <Button className={'!rounded-full text-md font-bold w-full '+(inria2.className)}>
-                        <Link className='rounded-full' href={`/merch/${product.id}`}>
-                            Buy
-                        </Link>
-                        </Button>
+                <Link href={'/merch'} className={cn(buttonVariants(), inria2.className, "font-semibold rounded-full w-full text-md md:text-lg")}>
+                    Buy
+                </Link>
                 </div>
             </CardContent>
         </Card>
