@@ -52,7 +52,7 @@ export async function createCheckoutSessionAction({ productId, size }: { product
 		success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/purchase-success?orderId=${order.id}`,
 		cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/merch/${product.id}`,
 		shipping_address_collection: {
-			allowed_countries: ["US"],
+			allowed_countries: ["US","IN"],
 		},
 		customer: customer.id,
 		// expires at 30 minutes(min value is 30 minutes)
