@@ -102,7 +102,7 @@ export const tiers: PricingTier[] = [
             `Exclusive goodies`,
         ],
         featured: false,
-        highlighted: true,
+        highlighted: false,
         soldOut: false,
         cta: `Join Us`,
         monthlyUrl:process.env.NODE_ENV==="development"?process.env.NEXT_PUBLIC_STRIPE_PREMIUM_DEV_MONTHLY_URL!:process.env.NEXT_PUBLIC_STRIPE_PREMIUM_LIVE_MONTHLY_URL!,
@@ -147,7 +147,7 @@ export default function PricingPage() {
         >
             <div className="w-full flex flex-col items-center">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
-                    <div className="w-full lg:w-auto mx-auto max-w-4xl lg:text-center">
+                    <div className="w-full lg:w-auto mx-auto max-w-4xl text-center">
                         <h1 style={{fontSize:"48px"}} className={"text-black dark:text-white text-2xl font-semibold max-w-xs sm:max-w-none !leading-tight "+(inria2.className)}>
                             Pricing
                         </h1>
@@ -277,7 +277,7 @@ export default function PricingPage() {
                                 <Button
 										asChild
                                         className={cn(
-                                            'w-full mt-4 text-black dark:text-white',
+                                            'w-full mt-4 text-black rounded-full dark:text-white',
                                             inria2.className,
                                             !tier.highlighted && !tier.featured
                                                 ? 'bg-gray-100 dark:bg-gray-600'
@@ -295,7 +295,7 @@ export default function PricingPage() {
 											}
 										}}
 									>
-										<Link href={"/api/auth/login"}>{tier.cta}</Link>
+										<Link className='text-lg' href={"/api/auth/login"}>{tier.cta}</Link>
 									</Button>
                                 <ul
                                     className={cn(

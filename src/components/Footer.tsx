@@ -8,7 +8,7 @@ const inria=Inria_Serif({
 })
 const Footer = () => {
     return (
-        <footer className="footer footer-center text-base-content border rounded p-10">
+        <footer className="footer bg-black footer-center text-base-content border rounded p-10">
             <nav>
                 <div className="grid grid-flow-col justify-center gap-10">
                     <a>

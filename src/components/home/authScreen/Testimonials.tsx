@@ -94,10 +94,10 @@ const ReviewCard = ({
 const Testimonials = () => {
     return (
         <div className="">
-            <p className={"text-3xl md:text-5xl tracking-tight mt-4 font-semibold text-center " + (inria2.className)}>
+            <p className={"text-3xl md:text-5xl tracking-tight mt-4 mb-4 font-semibold text-center " + (inria2.className)}>
                 Why <span style={{ color: "#EF47BC" }} className='font-bold px-1 text-white'>Choose Us</span>
             </p>
-            <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background py-20 md:shadow-xl">
+            <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-black py-20 md:shadow-xl">
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review) => (
                     <ReviewCard key={review.username} {...review} />
@@ -108,8 +108,8 @@ const Testimonials = () => {
                     <ReviewCard key={review.username} {...review} />
                 ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg from-white dark:from-background"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg from-white dark:from-background"></div>
         </div>
         </div>
         
