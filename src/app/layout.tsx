@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inria_Serif, Inter } from "next/font/google";
+import { Inria_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../providers/ThemeProvider"
 import Footer from "@/components/Footer";

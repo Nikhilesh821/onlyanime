@@ -90,8 +90,9 @@ const Sidebar = async () => {
                     </DropdownMenuContent>
                 </DropdownMenu>
                 <div className="flex ml-1 lg:ml-3 flex-wrap gap-2 mt-2 md:mt-2">
-            
-        </div>            </nav>
+
+                </div>
+            </nav>
         </div>
     )
 }
