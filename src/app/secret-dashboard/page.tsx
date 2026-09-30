@@ -1,4 +1,7 @@
+export const dynamic = "force-dynamic";
+
 import BaseLayout from '@/components/BaseLayout'
+
 import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ContentTab from './content/ContentTab'

@@ -1,4 +1,7 @@
+export const dynamic = "force-dynamic";
+
 import BaseLayout from '@/components/BaseLayout'
+
 import Product from '@/components/Product'
 import prisma from '@/db/prisma'
 import { Inria_Sans } from 'next/font/google'

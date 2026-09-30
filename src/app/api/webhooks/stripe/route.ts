@@ -6,8 +6,9 @@ import Stripe from "stripe";
 import { Resend } from "resend"
 import WelcomeEmail from "@/emails/WelcomeEmail";
 import ReceiptEmail from "@/emails/ReceiptEmail";
+export const dynamic = "force-dynamic";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || "re_placeholder");
 
 const webHooksSecret = process.env.NODE_ENV === "development" ? process.env.STRIPE_WEBHOOK_SECRET_DEV_KEY : process.env.STRIPE_WEBHOOK_SECRET_LIVE_KEY;
 export async function POST(req: Request) {

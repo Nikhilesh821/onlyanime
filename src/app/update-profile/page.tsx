@@ -1,4 +1,7 @@
+export const dynamic = "force-dynamic";
+
 import BaseLayout from '@/components/BaseLayout'
+
 import React from 'react'
 import UpdateProfile from './UpdateProfile'
 
