@@ -3,10 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci --cache .npm --prefer-offline
+        - nvm install 20
+        - nvm use 20
+        - node -v
+        - npm install --legacy-peer-deps
+        - npx prisma generate || true
     build:
       commands:
-        - npx prisma generate || true
         - npm run build
   artifacts:
     baseDirectory: .next
